@@ -1,0 +1,17 @@
+#Format du fichier liste : 1A;2B;3C;4D;5E;6F;7G;8H;9I;10J;11K;12L
+#1A  : type de sync (1 = local-ssh; 2 = ssh-local; 3 = local-local)
+#2B  : unite source (vide si type 2)
+#3C  : chemin source
+#4D  : unite destination (vide si type 1)
+#5E  : chemin destination
+#6F  : serveur ssh (vide si type 3)
+#7G  : port ssh (vide si type 3)
+#8H  : user ssh (vide si type 3)
+#9I  : unite cle rsa (vide si type 3)
+#10J : fichier clef rsa (vide si type 3)
+#11K : fichier script sh (vide si type 3)
+#12L : parametres rsync additionnels
+
+#1;C;"/users/toto/Documents"; ;"/home/toto/backup";server.domain.com;22;dev;C;"/Users/toto/Documents/clefs/id_rsa";"c:/scripts/exec.sh";--exclude-from="c:/Users/toto/excludes.txt"
+#2; ;"/home/toto/backup/docs/";C;"/users/toto/Documents;server.domain.com";22;dev;C;"/Users/toto/Documents/clefs/id_rsa"; ;
+#3;C;"/users/toto/test-archive";D;"/test-backup"; ; ; ; ; ; ;--exclude="*.txt"
